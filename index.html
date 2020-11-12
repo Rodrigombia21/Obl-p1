@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="contenedor">
+    <div id="cabezal" class="clearfix">
+      <img id="logo" src="https://develotion.com/assets/img/logo.jpg" alt="logo">
+      <ul id="navPrincipal">
+
+        <li id="btnSeccionInicio" class="btn visitante anfitrion huesped admin">
+          <a>Inicio</a>
+        </li>
+        <li id="btnSecccionLogin" class="btn visitante anfitrion huesped admin">
+          <a>Login</a>
+        </li>
+        <li id="btnSeccionRegistrarse" class="btn visitante anfitrion huesped admin">
+          <a>Registrarse</a>
+        </li>
+        <li id="btnSeccionGestion" class="btn anfitrion huesped admin">
+          <a>Gestión</a>
+        </li>
+        <li id="btnSeccionReporte" class="btn anfitrion huesped admin">
+          <a>Reporte</a>
+        </li>
+        <li id="btnSeccionCerrar" class="btn anfitrion huesped admin">
+          <a>Cerrar</a>
+        </li>
+        
+
+      </ul>
+      <div id="aux">
+        <a id="auxSeccionAltaAnfitrion" class="btnAux">Alta Anfitrión</a> | <a id="auxSeccionCargarCotizacion" class="btnAux">Cargar Cotización</a> |
+        <a>Registrar Inmuebles</a>
+      </div><!-- FIN AUX -->
+    </div><!-- FIN CABEZAL -->
+
+
+    
+    <div id="contenido">
+
+       <!--INICIO-->
+      <div id="seccionInicio" class="seccion">
+        <h1>Bienvenidos!</h1>
+        <hr>
+        <label for="txtBuscar">Buscar:</label>
+        <input type="text" id="txtBuscar">
+        <!-- <label for="txtComentarios">Campo:</label>
+            <textarea></textarea><br> -->
+        <input type="button" value="Buscar" id="btnBuscar"><br>
+      </div>
+      
+      <!--FIN INICIO-->
+
+
+      <!--GESTION-->
+      <div id="seccionGestion" class="seccion">
+        <h1>Sección gestión</h1>
+        <hr>
+        <h5>Las opciones se encuentran en el sub menú, bajo el menú principal</h5>
+      </div>
+      <!--FIN GESTION-->
+
+      
+      <!--LOGIN-->
+      <div id="seccionLogin" class="seccion"><!--Inicio de sesión al sistema-->
+        <h1>Iniciar Sesión</h1>
+        <hr>
+        <label for="txtUsuario">Ingrese Usuario</label><br>
+         <input type="text" id="txtUsuario"><br>
+         <label for="txtContrasenia">Ingrese Contraseña</label><br>
+         <input type="password" id="txtContrasenia"><br><br>
+ 
+         <input type="button" value="Login" id="btnLogin">
+          
+       </div>
+       <!--FIN LOGIN-->
+
+       <!--INMUEBLES-->
+       <div id="seccionInmueble" class="seccion"><!--Estructura para registrar inmuebles-->
+        <h1>Registro Inmuebles</h1>
+        <hr>
+        <label for="txtTitulo">Título</label><br>
+        <input type="text" id="txtTitulo"><br>
+       <label for="imgInmueble">Imagen</label><br>
+        <input type="file" id="imgInmueble"><br>
+        <label for="txtCiudad">Ciudad</label><br>
+        <input type="text" id="txtCiudad"><br>
+        <label for="txtPrecio">Precio</label><br>
+        <input type="text" id="txtPrecio"><br>
+        <label for="txtDescripcion">Descripción</label><br>
+        <textarea id="txtDescripcion"></textarea><br>
+        <input type="button" value="Registrar" id="btnRegistrar">
+        
+        <br>       
+        </div><!--FIN INMUEBLES-->
+
+
+       
+        <!--REGISTRO-->
+        <div id="seccionRegistro" class="seccion">
+
+          <h1>Registro nuevo usuario</h1>
+          <hr>
+
+          <label for="txtNombre">Nombre:</label><br>
+          <input type="text" id="txtNombre"><br>
+          <label for="txtApellido">Apellido:</label><br>
+          <input type="text" id="txtApellido"><br>
+          <label for="txtCorreo">Correo:</label><br>
+          <input type="text" id="txtCorreo"><br>
+          <label for="txtCelular">Celular:</label><br>
+          <input type="text" id="txtCelular"><br>
+          <label for="txtContraseniaRegistro">Ingrese Contraseña</label><br>
+          <input type="password" id="txtContraseniaRegistro"><br>
+          <label for="txtContraseniaRegistroRepeticion">Repita Contraseña</label><br>
+          <input type="password" id="txtContraseniaRegistroRepeticion"><br><br>
+          <input type="button" id="btnRegistrarUsuario" value="Registrarse"><br>
+          <!--Fin agregar colaborador-->
+        </div><!--FIN REGISTRO-->
+
+
+
+         <!--REPORTE-->
+     <div id="seccionReporte" class="seccion">
+      <h1>Reportes</h1>
+      <hr>
+      
+      <label for="txtDesde">Desde:</label>
+      <input type="number" id="txtDesde"><br>
+      <label for="txtHasta">Hasta:</label>
+      <input type="number" id="txtHasta"><br>
+       <br>
+      <input type="button" value="Buscar" id="btnBuscarInmueble">
+
+      <p id="pTotalBusqueda"></p>
+      <table id="tblBusquedaInmueble" border=1>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Imagen</th>
+                <th>Ciudad</th>
+                <th>Precio</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody id="tblBusquedaInmueble">
+
+        </tbody>
+      </table><!--Fin tabla-->
+
+      <p id="pBusquedaInmueble"></p><br><!--Fin del buscador-->
+
+
+     </div><!--FIN REPORTE-->
+
+
+
+
+      <br><br>
+      <div class="galeria">
+        <div class="img-container">
+          <img src="https://develotion.com/assets/img/casacampo.jpg">
+        </div>
+        <div class="btn-container">
+          <input type="button" value="<<"><input class="btn-siguiente" type="button" value=">>"><br>
+        </div>
+      </div>
+
+
+      <hr>
+      <hr>
+      <!--
+      <div>
+        <h2>Casa de campo</h2>
+        <h4><strong>US$ 40</strong> por noche</h4>
+        <img src="https://develotion.com/assets/img/casacampo.jpg" alt="casa de campo">
+        <div>
+          <label><strong>Maldonado</strong></label><label class="duracion">Promedio: <strong>4.9</strong></label>
+        </div>
+        <p>
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed quis tellus ac
+          justo commodo efficitur. Donec quis enim tortor. Nunc dapibus ultricies libero in maximus. Aenean sed quam sed
+          nisl mollis dignissim. Nunc eu augue imperdiet, ultrices nunc eget, accumsan nulla.
+        </p>
+        <p class="ver-mas">
+          Ver más...
+        </p>
+        <hr>
+      </div>
+      <div>
+
+
+        <h2>Casa de campo</h2>
+        <h4><strong>US$ 40</strong> por noche</h4>
+        <img src="https://develotion.com/assets/img/casacampo.jpg" alt="casa de campo">
+        <div>
+          <label><strong>Maldonado</strong></label><label class="duracion">Promedio: <strong>4.9</strong></label>
+        </div>
+        <p>
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed quis tellus ac
+          justo commodo efficitur. Donec quis enim tortor. Nunc dapibus ultricies libero in maximus. Aenean sed quam sed
+          nisl mollis dignissim. Nunc eu augue imperdiet, ultrices nunc eget, accumsan nulla.
+        </p>
+        <p class="ver-mas">
+          Ver más...
+        </p>
+        <hr>
+      </div>
+      -->
+      <!--FIN INMUEBLE-->
+    </div><!-- FIN CONTENIDO -->
+
+    <div id="pie">
+      <a href="https://www.ort.edu.uy">Footer</a>
+    </div><!-- FIN PIE -->
+
+  </div><!-- FIN CONTENEDOR -->
+
+  <script src="js/codigo.js"></script>
+  <script src="js/administrador.js"></script>
+  <script src="js/anfitrion.js"></script>
+  <script src="js/huesped.js"></script>
+  <script src="js/inmuebles.js"></script>
+</body>
+
+</html>
